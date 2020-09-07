@@ -39,3 +39,19 @@
     outline-width: 0;
     margin-left: 10px;
 }
+
+.sidebar_chats {
+    flex: 1;
+    background-color: white;
+    overflow: scroll;
+}
+
+.sidebar_chats>h3 {
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    padding: 20px
+}
+
+.sidebar_chats>h3:hover {
+    background-color: rgba(211, 211, 211, 0.639);
+}

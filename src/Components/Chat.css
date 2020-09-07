@@ -3,3 +3,32 @@
     flex: 0.65;
     flex-direction: column;
 }
+
+.chat_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.chat_headerInfo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.chat_headerInfo>h3 {
+    margin-bottom: 3px;
+    font-weight: 500;
+    padding: 0px;
+}
+
+.chat_headerInfo>p {
+    color: grey
+}
+
+.chat_body {
+    flex: 1;
+    background-image: url("./whatsAppImage.jpg")
+}
