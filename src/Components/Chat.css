@@ -30,5 +30,62 @@
 
 .chat_body {
     flex: 1;
-    background-image: url("./whatsAppImage.jpg")
+    background-image: url("./whatsAppImage.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    overflow: scroll;
+    padding: 30px;
+}
+
+.chat_message {
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: #83ee4e;
+    margin-bottom: 30px;
+}
+
+.chat_timestamp {
+    margin-left: 10px;
+    font-size: xx-small;
+}
+
+.chat_name {
+    position: absolute;
+    top: -15px;
+    font-weight: 800;
+    font-size: xx-small;
+}
+
+.chat_receiver {
+    margin-left: auto;
+    background-color: limegreen;
+}
+
+.chat_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    border: 1px solid lightgray;
+}
+
+.chat_footer>form {
+    display: flex;
+    flex: 1;
+}
+
+.chat_footer>form>input {
+    flex: 1;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.chat_footer>form>button {
+    display: none;
 }

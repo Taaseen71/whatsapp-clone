@@ -49,7 +49,7 @@
 .sidebar_chats>h3 {
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;
-    padding: 20px
+    padding: 20px;
 }
 
 .sidebar_chats>h3:hover {
