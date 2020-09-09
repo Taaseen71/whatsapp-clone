@@ -4,6 +4,7 @@ import Sidebar from './Components/Sidebar';
 import Chat from './Components/Chat';
 import Pusher from 'pusher-js';
 import axios from "axios";
+import ScrollToBottom from "react-scroll-to-bottom"
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
     const instance = axios.create({
         baseURL: 'http://localhost:3001',
     })
+
+
 
     useEffect(() => {
         instance.get('/messages/sync')
@@ -31,6 +34,7 @@ function App() {
         channel.bind('inserted', function (newMessage) {
             // alert(JSON.stringify(newMessage));
             setMessages([...messages, newMessage]);
+            // window.scrollTo({ bottom: 0, behavior: "smooth" })
         });
 
         //cleanup function
@@ -49,9 +53,11 @@ function App() {
             <h1>WhatsApp</h1>
             <div className="app_body">
                 <Sidebar />
+                {/* <ScrollToBottom > */}
+                {/* </ScrollToBottom> */}
                 <Chat messages={messages} />
             </div>
-        </div>
+        </div >
     );
 }
 

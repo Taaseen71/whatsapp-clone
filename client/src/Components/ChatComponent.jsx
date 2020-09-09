@@ -1,8 +1,10 @@
 import React from 'react'
+import ScrollToBottom from "react-scroll-to-bottom"
 
 function ChatComponent({ messages }) {
     return (
         <div>
+
             {messages.map(message => (
                 <p className={`chat_message ${!message.received && "chat_receiver"}`} >
                     <span className="chat_name">{message.name}</span> {message.message} <span className="chat_timestamp">
@@ -11,6 +13,7 @@ function ChatComponent({ messages }) {
                     </span>
                 </p>
             ))}
+
             {/* <p className="chat_message chat_receiver">
                 <span className="chat_name">Saad</span> outgoing message
                 </p> */}
