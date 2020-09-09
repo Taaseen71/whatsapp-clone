@@ -1,12 +1,12 @@
 import React from 'react'
 import { Avatar, IconButton } from '@material-ui/core'
 import "./Chat.css"
-import { SearchOutlined, AttachFile, MoreVert, SettingsInputAntenna } from '@material-ui/icons'
+import { SearchOutlined, AttachFile, MoreVert } from '@material-ui/icons'
 import ChatComponent from './ChatComponent'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
 
-function Chat() {
+function Chat({ messages }) {
 
     const sendMessage = (e) => {
         e.preventDefault();
@@ -38,7 +38,7 @@ function Chat() {
 
 
             <div className="chat_body">
-                <ChatComponent />
+                <ChatComponent messages={messages} />
             </div>
             <div className="chat_footer">
                 <InsertEmoticonIcon />

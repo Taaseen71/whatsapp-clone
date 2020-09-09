@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Messages = require('./db.js');
-
+const Cors = require('cors')
 
 //app config
 const app = express();
@@ -21,12 +21,14 @@ let pusher = new Pusher({
 
 //middleWare
 app.use(express.json());
+app.use(Cors());
 
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "*");
-    next();
-});
+//Below is the same as using Cors
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+//     res.setHeader("Access-Control-Allow-Headers", "*");
+//     next();
+// });
 
 
 
@@ -61,7 +63,9 @@ db.once('open', () => {
             pusher.trigger('messages', 'inserted',
                 {
                     name: messageDetails.name,
-                    message: messageDetails.message
+                    message: messageDetails.message,
+                    timestamp: messageDetails.timestamp,
+                    received: messageDetails.received,
                 }
             )
         } else {

@@ -4,7 +4,7 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Avatar, IconButton } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+
 import { SearchOutlined } from '@material-ui/icons';
 import SidebarChat from './SidebarChat';
 
