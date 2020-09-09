@@ -12,8 +12,8 @@ function App() {
     const [messages, setMessages] = useState([]);
 
     const instance = axios.create({
-        baseURL: 'http://localhost:3001',
-        // baseURL: 'https://whatsapp-backend-saad.herokuapp.com',
+        // baseURL: 'http://localhost:3001',
+        baseURL: 'https://whatsapp-backend-saad.herokuapp.com',
     })
 
 
