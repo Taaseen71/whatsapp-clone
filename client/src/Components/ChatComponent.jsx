@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollToBottom from "react-scroll-to-bottom"
+
 
 function ChatComponent({ messages }) {
     return (

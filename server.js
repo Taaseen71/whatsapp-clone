@@ -5,7 +5,8 @@ const Cors = require('cors')
 
 //app config
 const app = express();
-const PORT = 3001;
+// const PORT = 3001;
+const PORT = 'https://whatsapp-backend-saad.herokuapp.com';
 app.listen(PORT, () => console.log(`Listening to port: ${PORT}`));
 
 

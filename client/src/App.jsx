@@ -4,7 +4,7 @@ import Sidebar from './Components/Sidebar';
 import Chat from './Components/Chat';
 import Pusher from 'pusher-js';
 import axios from "axios";
-import ScrollToBottom from "react-scroll-to-bottom"
+// import ScrollToBottom from "react-scroll-to-bottom"
 
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
     const [messages, setMessages] = useState([]);
 
     const instance = axios.create({
-        baseURL: 'http://localhost:3001',
+        // baseURL: 'http://localhost:3001',
+        baseURL: 'https://whatsapp-backend-saad.herokuapp.com',
     })
 
 
